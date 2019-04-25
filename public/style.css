@@ -1,0 +1,97 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#app {
+  height: 100%;
+  width: 80%;
+  max-width: 1000px;
+  margin: auto;
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputSection {
+  height: 50%;
+  width: 90%;
+  margin-top: 5%;
+}
+
+.errorMessage {
+  height: 2rem;
+  margin-left: 10%;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.inputText {
+  font-family: monospace;
+  font-size: 14px;
+  width: 80%;
+  margin-left: 9%;
+  padding: 1%;
+  border: 4px solid rgb(47, 120, 153);
+  border-radius: 10px;
+  outline: 0;
+}
+
+.button {
+  background-color: white;
+  font-family: Courier;
+  font-size: 14px;
+  width: 30%;
+  margin-left: 35%;
+  text-align: center;
+  padding: 0.5%;
+  margin-top: 3%;
+  cursor: pointer;
+  background-color: rgb(128, 168, 187);
+  border: 4px solid rgb(47, 120, 153);
+  border-radius: 5px;
+  outline: 0;
+}
+
+.button:focus,
+.button:hover {
+  border: 4px solid rgb(95, 146, 170);
+}
+
+.linkSection {
+  width: 80%;
+  height: 100%;
+}
+
+.url {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "left" "right";
+  grid-gap: 15px;
+  justify-items: center;
+}
+
+.urlLink {
+  width: 100%;
+  border-bottom: 1px solid rgb(47, 120, 153);
+  color: rgb(47, 120, 153);
+  font-family: monospace;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+.url:first-child > .urlLink {
+  font-weight: bold;
+}
+
+.urlLink:hover {
+  color: rgb(79, 188, 238);
+}
