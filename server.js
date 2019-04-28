@@ -40,7 +40,7 @@ function buildNewUrl(urlInput) {
     newUrl.url = "https://" + urlInput;
   }
   const tinyUrlCount = base62.encode(count);
-  const tinyUrl = addZerosToTinyUrl(tinyUrlCount);
+  const tinyUrl = addZeroesToTinyUrl(tinyUrlCount);
   newUrl.tinyUrl = tinyUrl;
   urls.push(newUrl);
 
@@ -48,11 +48,11 @@ function buildNewUrl(urlInput) {
   return newUrl;
 }
 
-function addZerosToTinyUrl(tinyUrl) {
+function addZeroesToTinyUrl(tinyUrl) {
   if (tinyUrl.length < 6) {
     tinyUrl = "0" + tinyUrl;
-    const newTinyUrl = addZerosToTinyUrl(tinyUrl);
-    tinyUrl = newTinyUrl;
+    tinyUrl = addZeroesToTinyUrl(tinyUrl);
+    return tinyUrl;
   }
   return tinyUrl;
 }
