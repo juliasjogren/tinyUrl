@@ -5,7 +5,7 @@ const base62 = require("base62/lib/ascii");
 const urls = [];
 const port = 3000;
 
-let count = 9597;
+let count = base62.decode("g76B9");
 
 const app = express();
 
