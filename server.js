@@ -39,12 +39,12 @@ function buildNewUrl(urlInput) {
   } else {
     newUrl.url = "https://" + urlInput;
   }
-  count += 1;
   const tinyUrlCount = base62.encode(count);
   const tinyUrl = addZerosToTinyUrl(tinyUrlCount);
   newUrl.tinyUrl = tinyUrl;
   urls.push(newUrl);
 
+  count += 1;
   return newUrl;
 }
 
