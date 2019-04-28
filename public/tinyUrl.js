@@ -38,9 +38,9 @@ new Vue({
         }
       }).then(res => {
         res.json().then(data => {
-          let tinyUrl = "http://localhost:3000/" + data.url;
+          let tinyUrl = "http://localhost:3000/" + data.tinyUrl;
           const newUrl = {};
-          newUrl.url = this.url;
+          newUrl.url = data.url;
           newUrl.tinyUrl = tinyUrl;
           this.addRow(newUrl);
         });

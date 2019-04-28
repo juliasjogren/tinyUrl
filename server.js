@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.post("/api/addUrl", (req, res) => {
   const urlInput = req.body.url;
   const newUrl = buildNewUrl(urlInput);
-  res.send({ url: newUrl.tinyUrl });
+  res.send(newUrl);
 });
 
 app.get("/:tinyUrl", function(req, res) {
